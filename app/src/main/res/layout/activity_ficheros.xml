@@ -36,6 +36,7 @@
         android:layout_marginBottom="20dp"
         android:layout_weight="1"
         android:background="#1E1E26"
+        android:backgroundTint="#E17055"
         android:gravity="top|start"
         android:hint="Redacta aquí el informe confidencial..."
         android:inputType="textMultiLine"
@@ -45,21 +46,31 @@
 
     <Button
         android:id="@+id/btnEscribirFichero"
-        android:layout_width="match_parent"
+        android:layout_width="260dp"
         android:layout_height="54dp"
         android:layout_marginBottom="12dp"
-        android:backgroundTint="#00B894"
-        android:text="Guardar en Bóveda Privada"
+        android:backgroundTint="#E17055"
+        android:text="Sellar y Guardar Pergamino"
         android:textColor="#FFFFFF"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnLeerFichero"
-        android:layout_width="match_parent"
+        android:layout_width="260dp"
         android:layout_height="54dp"
+        android:layout_marginBottom="12dp"
         android:backgroundTint="#34495E"
-        android:text="Leer Pergamino"
+        android:text="Desenrollar y Leer Pergamino"
         android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnIrExterno"
+        android:layout_width="260dp"
+        android:layout_height="54dp"
+        android:backgroundTint="#55E6C1"
+        android:text="Ir a Mapas Externos"
+        android:textColor="#0F0F14"
         android:textStyle="bold" />
 
 </LinearLayout>

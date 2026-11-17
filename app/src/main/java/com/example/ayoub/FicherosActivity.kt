@@ -1,6 +1,7 @@
 package com.example.ayoub
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -23,6 +24,12 @@ class FicherosActivity : AppCompatActivity() {
         etContenido = findViewById(R.id.etContenidoFichero)
         btnEscribir = findViewById(R.id.btnEscribirFichero)
         btnLeer = findViewById(R.id.btnLeerFichero)
+
+        val btnIrExterno = findViewById<Button>(R.id.btnIrExterno)
+        btnIrExterno.setOnClickListener {
+            val intent = Intent(this, AlmacenamientoExternoActivity::class.java)
+            startActivity(intent)
+        }
 
         btnEscribir.setOnClickListener {
             val nombre = etNombreArchivo.text.toString().trim()

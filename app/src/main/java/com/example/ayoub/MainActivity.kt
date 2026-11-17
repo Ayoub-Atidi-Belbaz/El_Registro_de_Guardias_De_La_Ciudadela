@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity() {
 
         val btnIrPrefs = findViewById<Button>(R.id.btnIrPrefs)
         val btnIrFicheros = findViewById<Button>(R.id.btnIrFicheros)
-        val btnIrExterno = findViewById<Button>(R.id.btnIrExterno)
         val btnIrSQLite = findViewById<Button>(R.id.btnIrSQLite)
 
         btnIrPrefs.setOnClickListener {
@@ -24,17 +23,12 @@ class MainActivity : AppCompatActivity() {
         btnIrFicheros.setOnClickListener {
             val intent = Intent(this, FicherosActivity::class.java)
             startActivity(intent)
-            Toast.makeText(this, "Laboratorio 2 A", Toast.LENGTH_SHORT).show()
-        }
-
-        btnIrExterno.setOnClickListener {
-            val intent = Intent(this, AlmacenamientoExternoActivity::class.java)
-            startActivity(intent)
-            Toast.makeText(this, "Laboratorio 2 B", Toast.LENGTH_SHORT).show()
         }
 
         btnIrSQLite.setOnClickListener {
-            Toast.makeText(this, "Laboratorio 3", Toast.LENGTH_SHORT).show()
+            // val intent = Intent(this, SQLiteActivity::class.java)
+            // startActivity(intent)
+            Toast.makeText(this, "Laboratorio 3 pendiente", Toast.LENGTH_SHORT).show()
         }
     }
 }

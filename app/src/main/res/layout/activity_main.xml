@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0F0F14"
+    android:background="#0D0D11"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="24dp">
@@ -10,44 +10,48 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="2627 - IAX - Prg. MDM"
+        android:textColor="#75757A"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
         android:layout_marginBottom="32dp"
-        android:text="UT7: Persistencia en la Ciudadela"
+        android:text="UT7: Persistencia de Datos"
         android:textColor="#FFFFFF"
-        android:textSize="22sp"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnIrPrefs"
-        android:layout_width="match_parent"
+        android:layout_width="290dp"
         android:layout_height="56dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="#6C5CE7"
-        android:text="Laboratorio 1 Registro de Guardias"
-        android:textColor="#FFFFFF" />
+        android:text="Lab 1: Registro de Guardias"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnIrFicheros"
-        android:layout_width="match_parent"
+        android:layout_width="290dp"
         android:layout_height="56dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="#00B894"
-        android:text="Laboratorio 2 Pergaminos Internos"
-        android:textColor="#FFFFFF" />
-
-    <Button
-        android:id="@+id/btnIrExterno"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#0984E3"
-        android:text="Laboratorio 2 Mapas Externos"
-        android:textColor="#FFFFFF" />
+        android:backgroundTint="#6C5CE7"
+        android:text="Lab 2: Pergaminos de la Ciudadela"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnIrSQLite"
-        android:layout_width="match_parent"
+        android:layout_width="290dp"
         android:layout_height="56dp"
-        android:backgroundTint="#2D3436"
-        android:text="Laboratorio 3"
-        android:textColor="#B2BEC3" />
+        android:backgroundTint="#6C5CE7"
+        android:text="Lab 3: Forja de Batallones"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
 </LinearLayout>

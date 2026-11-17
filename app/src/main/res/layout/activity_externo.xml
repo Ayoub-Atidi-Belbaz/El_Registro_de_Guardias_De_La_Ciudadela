@@ -12,9 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="24dp"
-        android:text="MAPAS DE CAMPAÑA"
+        android:text="MAPA DE FRONTERAS (MEMORIA EXTERNA)"
         android:textColor="#55E6C1"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <EditText
@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginBottom="16dp"
-        android:hint="Nombre del mapa (ej: mapa_mundi.txt)"
+        android:hint="Nombre del mapa (ej: mapa_frontera.txt)"
         android:inputType="text"
         android:textColor="#FFFFFF"
         android:textColorHint="#75757A">
@@ -36,8 +36,9 @@
         android:layout_marginBottom="20dp"
         android:layout_weight="1"
         android:background="#1E1E26"
+        android:backgroundTint="#55E6C1"
         android:gravity="top|start"
-        android:hint="Coordenadas y notas de exploración..."
+        android:hint="Anota los movimientos de tropas y coordenadas..."
         android:inputType="textMultiLine"
         android:padding="12dp"
         android:textColor="#FFFFFF"
@@ -45,17 +46,17 @@
 
     <Button
         android:id="@+id/btnEscribirExterno"
-        android:layout_width="match_parent"
+        android:layout_width="260dp"
         android:layout_height="54dp"
-        android:layout_marginBottom="12dp"
-        android:backgroundTint="#0984E3"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#55E6C1"
         android:text="Trazar y Guardar Mapa"
-        android:textColor="#FFFFFF"
+        android:textColor="#0F0F14"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnLeerExterno"
-        android:layout_width="match_parent"
+        android:layout_width="260dp"
         android:layout_height="54dp"
         android:backgroundTint="#34495E"
         android:text="Consultar Mapa de Campaña"
