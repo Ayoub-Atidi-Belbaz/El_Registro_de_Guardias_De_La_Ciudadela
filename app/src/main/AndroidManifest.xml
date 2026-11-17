@@ -13,6 +13,16 @@
         android:theme="@style/Theme.El_Registro_de_Guardias_De_La_Ciudadela">
 
         <activity
+            android:name=".FicherosActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".AlmacenamientoExterno"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".PreferenciasActivity"
             android:exported="false" />
 
