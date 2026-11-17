@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnIrExterno.setOnClickListener {
-            val intent = Intent(this, AlmacenamientoExterno::class.java)
+            val intent = Intent(this, AlmacenamientoExternoActivity::class.java)
             startActivity(intent)
             Toast.makeText(this, "Laboratorio 2 B", Toast.LENGTH_SHORT).show()
         }
