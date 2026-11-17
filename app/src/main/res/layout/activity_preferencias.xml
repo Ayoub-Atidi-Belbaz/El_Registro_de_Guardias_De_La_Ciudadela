@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F0F14"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Consola Guardia de Gondor"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etNombreGuardia"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:hint="Nombre del efectivo"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#75757A">
+        <requestFocus />
+    </EditText>
+
+    <Spinner
+        android:id="@+id/spRango"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="#1E1E26"
+        android:entries="@array/rangos_guardia" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/swEstadoTurno"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:text="Efectivo en guardia activa"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnGuardarPref"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#6C5CE7"
+        android:text="Registrar Turno"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/tvUltimoRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sin guardia asignada"
+        android:textColor="#9E9E9E"
+        android:textSize="15sp" />
+
+</LinearLayout>

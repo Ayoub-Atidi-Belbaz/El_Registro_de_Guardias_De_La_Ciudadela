@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">El_Registro_de_Guardias_De_La_Ciudadela</string>
+    <string-array name="rangos_guardia">
+        <item>Recluta</item>
+        <item>Capitan</item>
+        <item>Veterano</item>
+    </string-array>
 </resources>
