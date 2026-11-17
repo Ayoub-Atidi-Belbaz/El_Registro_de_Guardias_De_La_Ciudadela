@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F0F14"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="ARCHIVO DE LA CIUDADELA"
+        android:textColor="#FAB1A0"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etNombreArchivo"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:hint="Nombre del pergamino (ej: cronica.txt)"
+        android:inputType="text"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#75757A">
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/etContenidoFichero"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="1"
+        android:background="#1E1E26"
+        android:gravity="top|start"
+        android:hint="Redacta aquí el informe confidencial..."
+        android:inputType="textMultiLine"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#75757A" />
+
+    <Button
+        android:id="@+id/btnEscribirFichero"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#00B894"
+        android:text="Guardar en Bóveda Privada"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnLeerFichero"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:backgroundTint="#34495E"
+        android:text="Leer Pergamino"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+</LinearLayout>
