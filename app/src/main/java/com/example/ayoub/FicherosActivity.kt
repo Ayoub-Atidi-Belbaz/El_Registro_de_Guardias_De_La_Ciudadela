@@ -38,7 +38,7 @@ class FicherosActivity : AppCompatActivity() {
             if (nombre.isNotEmpty()) {
                 try {
                     openFileOutput(nombre, Context.MODE_PRIVATE).use { flujoSalida ->
-                        flujoSalida.write(texto.toByteArray())
+                        flujoSalida.write(texto.toByteArray(Charsets.UTF_8))
                     }
                     Toast.makeText(this, "Pergamino sellado con éxito en files/", Toast.LENGTH_SHORT).show()
                     etContenido.text.clear()
@@ -55,7 +55,7 @@ class FicherosActivity : AppCompatActivity() {
 
             if (nombre.isNotEmpty()) {
                 try {
-                    val textoLeido = openFileInput(nombre).bufferedReader().use { lector ->
+                    val textoLeido = openFileInput(nombre).bufferedReader(Charsets.UTF_8).use { lector ->
                         lector.readText()
                     }
                     etContenido.setText(textoLeido)

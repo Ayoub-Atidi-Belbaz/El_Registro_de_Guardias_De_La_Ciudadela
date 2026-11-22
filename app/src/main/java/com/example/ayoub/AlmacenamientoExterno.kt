@@ -36,10 +36,19 @@ class AlmacenamientoExternoActivity : AppCompatActivity() {
             if (nombre.isNotEmpty()) {
                 try {
                     val rutaDirectorio = getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)
-                    val archivoTarget = File(rutaDirectorio, nombre)
-                    archivoTarget.writeText(contenido)
-                    Toast.makeText(this, "Mapa guardado en Android/data/.../Documents/", Toast.LENGTH_SHORT).show()
-                    etCoordenadas.text.clear()
+                    if (rutaDirectorio != null) {
+                        if (!rutaDirectorio.exists()) {
+                            rutaDirectorio.mkdirs()
+                        }
+                        val archivoTarget = File(rutaDirectorio, nombre)
+                        archivoTarget.outputStream().use { flujoSalida ->
+                            flujoSalida.write(contenido.toByteArray(Charsets.UTF_8))
+                        }
+                        Toast.makeText(this, "Mapa guardado en Android/data/.../Documents/", Toast.LENGTH_SHORT).show()
+                        etCoordenadas.text.clear()
+                    } else {
+                        Toast.makeText(this, "No se pudo acceder al directorio externo", Toast.LENGTH_SHORT).show()
+                    }
                 } catch (e: Exception) {
                     Toast.makeText(this, "Error de hardware al escribir: ${e.message}", Toast.LENGTH_SHORT).show()
                 }
@@ -59,14 +68,20 @@ class AlmacenamientoExternoActivity : AppCompatActivity() {
             if (nombre.isNotEmpty()) {
                 try {
                     val rutaDirectorio = getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)
-                    val archivoTarget = File(rutaDirectorio, nombre)
+                    if (rutaDirectorio != null) {
+                        val archivoTarget = File(rutaDirectorio, nombre)
 
-                    if (archivoTarget.exists()) {
-                        val textoRecuperado = archivoTarget.readText()
-                        etCoordenadas.setText(textoRecuperado)
-                        Toast.makeText(this, "Mapa cargado correctamente", Toast.LENGTH_SHORT).show()
+                        if (archivoTarget.exists()) {
+                            val textoRecuperado = archivoTarget.inputStream().bufferedReader(Charsets.UTF_8).use { lector ->
+                                lector.readText()
+                            }
+                            etCoordenadas.setText(textoRecuperado)
+                            Toast.makeText(this, "Mapa cargado correctamente", Toast.LENGTH_SHORT).show()
+                        } else {
+                            etNombreMapa.error = "El plano especificado no existe en este sector"
+                        }
                     } else {
-                        etNombreMapa.error = "El plano especificado no existe en este sector"
+                        Toast.makeText(this, "Directorio externo no accesible", Toast.LENGTH_SHORT).show()
                     }
                 } catch (e: Exception) {
                     Toast.makeText(this, "Error al acceder al flujo de lectura: ${e.message}", Toast.LENGTH_SHORT).show()
